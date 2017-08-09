@@ -13,7 +13,6 @@ import MainComponent from './main'
     implementing our wrapper around increment; the component doesn't care   */
 
 const mapDispatchToProps = dispatch => ({
-  showNotifier: (value = 1) => dispatch(actionSpreader('SHOWTOAST', { content: 'Hello this is Shinobi' }))
 })
 
 const mapStateToProps = (state) => ({

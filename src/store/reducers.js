@@ -1,11 +1,9 @@
 import { combineReducers } from 'redux'
 import locationReducer from './location'
-import notifierReducer from '../connectors/notifier/reducer'
 
 export const makeRootReducer = (asyncReducers) => {
   return combineReducers({
     location: locationReducer,
-    notify:notifierReducer,
     ...asyncReducers
   })
 }
