@@ -3,7 +3,7 @@ import { IndexLink, Link } from 'react-router' // eslint-disable-line
 import PropTypes from 'prop-types'
 
 export const CoreLayout = ({ children }) => (
-  <div className='core-layout-styles'>
+  <div>
     {children}
   </div>
 )
