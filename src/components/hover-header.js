@@ -46,7 +46,8 @@ class Hheader extends Component {
       position : `absolute`,
       bottom : 0,
       left : `${this.state.vtextpos}%`,
-      padding : `5px 0px`
+      padding : `5px 0px`,
+      color: `#fcfcfc`
     }
     const column = {
       display :  `flex`,
