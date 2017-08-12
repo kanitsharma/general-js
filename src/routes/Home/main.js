@@ -18,7 +18,7 @@ const Home = ({ showNotifier }) =>
             height='300'
             source={HeadingHero}
             boxpos='start' hpos='center' hsize='80'
-            animation='true'
+            animation
           />
         </Landingsection>
         <Landingsection hpos='center' vpos='center' background='linear-gradient(to top, #FF1361 0%, #44107A 100%)'>
@@ -30,7 +30,7 @@ const Home = ({ showNotifier }) =>
             height='300'
             source={HeadingHero}
             boxpos='start' hpos='center' hsize='80'
-            animation='false'
+            animation={false}
           />
         </Landingsection>
       </div>
