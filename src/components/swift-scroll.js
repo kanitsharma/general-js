@@ -41,7 +41,7 @@ class Swiftscroll extends Component {
 }
 
 Swiftscroll.propTypes = {
-  children: PropTypes.element
+  children: PropTypes.node
 }
 
 export default Swiftscroll

@@ -9,31 +9,29 @@ import HeadingHero from '../../static/Orange Juice.jpeg'
 const Home = ({ showNotifier }) =>
   <div>
     <Swiftscroll>
-      <div>
-        <Landingsection hpos='center' vpos='center' background='linear-gradient(to top, #44107A 0%, #231557 100%)'>
-          <Hheader
-            htext='general/js'
-            btext='Give your Javascript Project a new home'
-            width='300'
-            height='300'
-            source={HeadingHero}
-            boxpos='start' hpos='center' hsize='80'
-            animation
-          />
-        </Landingsection>
-        <Landingsection hpos='center' vpos='center' background='linear-gradient(to top, #FF1361 0%, #44107A 100%)'>
-          <Hheader
-            htext='Shinobi'
-            vtext='rajatsharma305/shinobi'
-            btext='Ninjaic Starter for Redux'
-            width='270'
-            height='270'
-            source={HeadingHero}
-            boxpos='start' hpos='center' hsize='80'
-            animation={false}
-          />
-        </Landingsection>
-      </div>
+      <Landingsection hpos='center' vpos='center' background='linear-gradient(to top, #44107A 0%, #231557 100%)'>
+        <Hheader
+          htext='general/js'
+          btext='Give your Javascript Project a new home'
+          width='300'
+          height='300'
+          source={HeadingHero}
+          boxpos='start' hpos='center' hsize='80'
+          animation
+        />
+      </Landingsection>
+      <Landingsection hpos='center' vpos='center' background='linear-gradient(to top, #FF1361 0%, #44107A 100%)'>
+        <Hheader
+          htext='Shinobi'
+          vtext='rajatsharma305/shinobi'
+          btext='Ninjaic Starter for Redux'
+          width='270'
+          height='270'
+          source={HeadingHero}
+          boxpos='start' hpos='center' hsize='80'
+          animation={false}
+        />
+      </Landingsection>
     </Swiftscroll>
   </div>
 
