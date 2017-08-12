@@ -96,7 +96,7 @@ class Hheader extends Component {
         <h1 style = {transform1}>{this.props.htext}</h1>
         <div style={column}>
           <p style={middle}>{this.props.mtext}</p>
-          <p style={{zIndex : `10` , margin : `0px 10px`}}>{this.props.btext}</p>
+          <p style={{zIndex : `10` , margin : `0px 10px`, color: `#fcfcfc`}}>{this.props.btext}</p>
         </div>
       </div>
     )
