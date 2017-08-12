@@ -1,6 +1,7 @@
 // We only need to import the modules necessary for initial render
 import CoreLayout from '../core/layout'
 import Home from './Home'
+import Showcase from './showcase'
 
 /*  Note: Instead of using JSX, we recommend using react-router
     PlainRoute objects to build route definitions.   */
@@ -12,7 +13,8 @@ export const createRoutes = (store) => ({
     onEnter: (nextState, replace) => replace('home')
   },
   childRoutes: [
-    Home(store)
+    Home(store),
+    Showcase(store)
   ]
 })
 

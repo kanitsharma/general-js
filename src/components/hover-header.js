@@ -10,7 +10,7 @@ class Hheader extends Component {
       width : 500,
       height : 250,
       boxpos : `row`,
-      vtextpos : 0,
+      vtextpos : -2,
       hpos : 0,
       mpos : `auto`
     }
