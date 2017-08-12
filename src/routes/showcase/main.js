@@ -93,10 +93,10 @@ class Showcase extends Component {
 }
 
 Showcase.propTypes = {
-  getfamous: PT.function,
+  getfamous: PT.func,
   jqueryDownload: PT.array,
   reactDownload: PT.array,
   angularDownload: PT.array,
-  vueDownload: PT.arra
+  vueDownload: PT.array
 }
 export default Showcase

@@ -6,7 +6,7 @@ const Gridcomponent = ({ children }) => {
     display: 'grid',
     gridTemplateColumn: '1fr 1fr',
     gridTemplateRow: '1fr 1fr',
-    gridGap: '5vh 3vw'
+    gridGap: '5vh 10vw',
   }
   return (
     <div style={gridContainer}>
@@ -16,7 +16,7 @@ const Gridcomponent = ({ children }) => {
 }
 
 Gridcomponent.propTypes = {
-  children: PropTypes.element
+  children: PropTypes.node
 }
 
 export default Gridcomponent

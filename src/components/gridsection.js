@@ -4,11 +4,19 @@ import PropTypes from 'prop-types'
 const Gridsection = ({ column, row, children }) => {
   const gridSection = {
     gridColumn: column,
-    gridRow: row
+    gridRow: row,
+  }
+  const subcontainer = {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center'
   }
   return (
     <div style={gridSection}>
-      {children}
+      <div style={subcontainer}>
+        {children}
+      </div>
     </div>
   )
 }

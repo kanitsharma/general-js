@@ -109,9 +109,9 @@ Hheader.propTypes = {
   mtext: PropTypes.string,
   htext: PropTypes.string,
   btext: PropTypes.string,
-  width: PropTypes.number,
-  height: PropTypes.number,
-  hsize: PropTypes.number,
+  width: PropTypes.string,
+  height: PropTypes.string,
+  hsize: PropTypes.string,
   hpos: PropTypes.string,
   boxpos: PropTypes.string
 }
