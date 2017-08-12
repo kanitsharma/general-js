@@ -26,8 +26,8 @@ const Home = ({ showNotifier }) =>
             htext='Shinobi'
             vtext='rajatsharma305/shinobi'
             btext='Ninjaic Starter for Redux'
-            width='300'
-            height='300'
+            width='270'
+            height='270'
             source={HeadingHero}
             boxpos='start' hpos='center' hsize='80'
             animation={false}
@@ -40,5 +40,5 @@ const Home = ({ showNotifier }) =>
 Home.propTypes = {
   showNotifier: PropTypes.func
 }
-// background-image: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%);
+
 export default Home
