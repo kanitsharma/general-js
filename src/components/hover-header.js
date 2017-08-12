@@ -88,7 +88,7 @@ class Hheader extends Component {
     return (
       <div onMouseMove={hover} onMouseEnter={enter} onMouseLeave={leave} style={container} id='div'>
         <div style={transform2}>
-          <img src={this.props.source} width={this.props.width} height={this.props.height} />
+          {this.props.component || <img src={this.props.source} width={this.props.width} height={this.props.height} />}
         </div>
         <p style={vertical}>{this.props.vtext}</p>
         <h1 style={transform1}>{this.props.htext}</h1>
@@ -104,6 +104,7 @@ class Hheader extends Component {
 Hheader.propTypes = {
   animation: PropTypes.bool,
   source: PropTypes.string,
+  component: PropTypes.element,
   vtext: PropTypes.string,
   mtext: PropTypes.string,
   htext: PropTypes.string,

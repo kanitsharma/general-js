@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import actionSpreader from '../../utils/actionspreader' // eslint-disable-line
-
+import { pick } from 'ramda'
 /*  This is a container component. Notice it does not contain any JSX,
     nor does it import React. This component is **only** responsible for
     wiring in the actions and state necessary to render a presentational
@@ -13,9 +13,11 @@ import MainComponent from './main'
     implementing our wrapper around increment; the component doesn't care   */
 
 const mapDispatchToProps = dispatch => ({
+  getfamous: () => dispatch(actionSpreader('GETFAMOUS'))
 })
 
 const mapStateToProps = (state) => ({
+  ...pick(['jqueryDownload', 'reactDownload', 'angularDownload', 'vueDownload'], state.showcase)
 })
 
 /*  Note: mapStateToProps is where you should use `reselect` to create selectors, ie:
