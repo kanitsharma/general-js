@@ -1,5 +1,5 @@
-/* eslint-disable */
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 class Hheader extends Component {
   constructor (props) {
@@ -16,24 +16,20 @@ class Hheader extends Component {
     }
   }
   componentDidMount () {
-    if(this.props.boxpos == 'start'){
-      this.setState({boxpos : `row`})
+    if (this.props.boxpos === 'start') {
+      this.setState({ boxpos: `row` })
+    } else if (this.props.boxpos === 'end') {
+      this.setState({ boxpos: `row-reverse`, vtextpos : 95 })
     }
-    else if(this.props.boxpos == 'end'){
-      this.setState({boxpos : `row-reverse` , vtextpos : 95})
-    }
-
-    if(this.props.hpos == 'start'){
-      this.setState({hpos : 0 , mpos : `auto`})
-    }
-    else if(this.props.hpos == 'center'){
-      this.setState({hpos : 20 , mpos : `0px`})
-    }
-    else if(this.props.hpos == `end`){
-      this.setState({hpos : 50 , mpos : `0px`})
+    if (this.props.hpos === 'start') {
+      this.setState({ hpos: 0, mpos : `auto` })
+    } else if (this.props.hpos === 'center') {
+      this.setState({ hpos: 20, mpos : `0px` })
+    } else if (this.props.hpos === `end`) {
+      this.setState({ hpos : 50, mpos : `0px` })
     }
   }
-  render(){
+  render () {
     const container = {
       width : `${this.state.width}px`,
       height : `auto`,
@@ -76,32 +72,47 @@ class Hheader extends Component {
       transition : `all 0.2s ease`
     }
     const hover = event => {
-      if(this.props.animation){
-        this.setState({ x : (event.pageX - document.getElementById('div').offsetLeft)*0.1, y : (event.pageY - document.getElementById('div').offsetTop)*0.2 })
+      if (this.props.animation) {
+        this.setState({ x : (event.pageX - document.getElementById('div').offsetLeft) * 0.1,
+          y : (event.pageY - document.getElementById('div').offsetTop) * 0.2 })
       }
     }
     const leave = event => {
-      this.setState({ x : 0 , y : 0 })
+      this.setState({ x : 0, y : 0 })
     }
     const enter = event => {
-      if(this.props.animation){
-        this.setState({ x : event.clientX*0.05 , y : event.clientY*0.05 })
+      if (this.props.animation) {
+        this.setState({ x : event.clientX * 0.05, y : event.clientY * 0.05 })
       }
     }
-    return(
-      <div onMouseMove = {hover.bind(this)} onMouseEnter = {enter.bind(this)} onMouseLeave = {leave.bind(this)} style={container} id='div'>
-        <div style = {transform2}>
-          <img src = {this.props.source} width={this.props.width} height={this.props.height}/>
+    return (
+      <div onMouseMove={hover} onMouseEnter={enter} onMouseLeave={leave} style={container} id='div'>
+        <div style={transform2}>
+          <img src={this.props.source} width={this.props.width} height={this.props.height} />
         </div>
         <p style={vertical}>{this.props.vtext}</p>
-        <h1 style = {transform1}>{this.props.htext}</h1>
+        <h1 style={transform1}>{this.props.htext}</h1>
         <div style={column}>
           <p style={middle}>{this.props.mtext}</p>
-          <p style={{zIndex : `10` , margin : `0px 10px`, color: `#fcfcfc`}}>{this.props.btext}</p>
+          <p style={{ zIndex:`10`, margin: `0px 10px`, color: `#fcfcfc` }}>{this.props.btext}</p>
         </div>
       </div>
     )
   }
+}
+
+Hheader.propTypes = {
+  animation: PropTypes.bool,
+  source: PropTypes.string,
+  vtext: PropTypes.string,
+  mtext: PropTypes.string,
+  htext: PropTypes.string,
+  btext: PropTypes.string,
+  width: PropTypes.number,
+  height: PropTypes.number,
+  hsize: PropTypes.number,
+  hpos: PropTypes.string,
+  boxpos: PropTypes.string
 }
 
 export default Hheader

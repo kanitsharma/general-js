@@ -6,7 +6,7 @@ class Swiftscroll extends Component {
     let scrollamount = 0
     let panelcounter = 0
     let wait = false
-    const well = document.getElementById('well')
+    const well = this.well
     well.style.transform = 'translateY(0)'
     const panels = [...document.querySelectorAll('.panel')]
     well.addEventListener('wheel', e => {
@@ -33,7 +33,7 @@ class Swiftscroll extends Component {
   }
   render () {
     return (
-      <div id='well'>
+      <div ref={(input) => { this.well = input }} className='well'>
         {this.props.children}
       </div>
     )
