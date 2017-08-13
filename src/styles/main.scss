@@ -2,15 +2,12 @@
 
 //Swift Scroll
 body {
-	overflow-y: hidden;
 	margin: 0;
   font-family: 'Roboto Mono', monospace;
 }
-
 .well {
 	transition: 1s cubic-bezier(0.5, 0, 0.5, 1);
 }
-
 .panel {
 	overflow: hidden;
 	box-sizing: border-box;

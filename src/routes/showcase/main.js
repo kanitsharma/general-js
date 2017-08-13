@@ -33,10 +33,11 @@ class Showcase extends Component {
     this.props.getfamous()
   }
   render () {
+    const bgcolor = {
+      background: '#44107A no-repeat fixed center'
+    }
     const { jqueryDownload, vueDownload, reactDownload, angularDownload } = this.props
-    return <Swiftscroll
-      background='#44107A no-repeat fixed center'
-      amount={40}>
+    return <div style={bgcolor}>
       <Landingsection hpos='center' vpos='top' size='40vh'>
         <Gridcomponent templatecolumn='1fr 1fr' templaterow='1fr'>
           <Gridsection column='1 / 2' row='1'>
@@ -190,7 +191,7 @@ class Showcase extends Component {
           </Gridsection>
         </Gridcomponent>
       </Landingsection>
-    </Swiftscroll>
+    </div>
   }
 }
 
