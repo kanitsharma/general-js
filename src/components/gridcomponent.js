@@ -1,12 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Gridcomponent = ({ children }) => {
+const Gridcomponent = ({ children, templatecolumn, templaterow }) => {
   const gridContainer = {
     display: 'grid',
-    gridTemplateColumn: '1fr 1fr',
-    gridTemplateRow: '1fr 1fr',
-    gridGap: '5vh 10vw',
+    gridTemplateColumn: templatecolumn,
+    gridTemplateRow: templaterow,
+    gridGap: '5vh 3vw',
+    marginTop: '10vh'
   }
   return (
     <div style={gridContainer}>
@@ -16,7 +17,9 @@ const Gridcomponent = ({ children }) => {
 }
 
 Gridcomponent.propTypes = {
-  children: PropTypes.node
+  children: PropTypes.node,
+  templaterow: PropTypes.string,
+  templatecolumn: PropTypes.string
 }
 
 export default Gridcomponent

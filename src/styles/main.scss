@@ -2,7 +2,7 @@
 
 //Swift Scroll
 body {
-	overflow: hidden;
+	overflow-y: hidden;
 	margin: 0;
   font-family: 'Roboto Mono', monospace;
 }
@@ -12,7 +12,6 @@ body {
 }
 
 .panel {
-	height: 100vh;
 	overflow: hidden;
 	box-sizing: border-box;
 }

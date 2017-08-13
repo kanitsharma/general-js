@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 
 class Swiftscroll extends Component {
   componentDidMount () {
+    window.onscroll = function () { window.scrollTo(0, 0) }
     let scrollamount = 0
     let panelcounter = 0
     let wait = false
@@ -12,7 +13,7 @@ class Swiftscroll extends Component {
     well.addEventListener('wheel', e => {
       if (e.deltaY < 0 && panelcounter > 0 && wait === false) {
         wait = true
-        scrollamount += 100
+        scrollamount += this.props.amount
         panelcounter--
         well.style.transform = `translateY(${scrollamount}vh)`
         setTimeout(function () {
@@ -21,7 +22,7 @@ class Swiftscroll extends Component {
       }
       if (e.deltaY > 0 && panelcounter < panels.length - 1 && wait === false) {
         wait = true
-        scrollamount -= 100
+        scrollamount -= this.props.amount
         panelcounter++
         well.style.transform = `translateY(${scrollamount}vh)`
         setTimeout(function () {
@@ -32,15 +33,22 @@ class Swiftscroll extends Component {
     })
   }
   render () {
+    const bgcolor = {
+      background: this.props.background
+    }
     return (
-      <div ref={(input) => { this.well = input }} className='well'>
-        {this.props.children}
+      <div style={bgcolor}>
+        <div ref={(input) => { this.well = input }} className='well' >
+          {this.props.children}
+        </div>
       </div>
     )
   }
 }
 
 Swiftscroll.propTypes = {
+  background: PropTypes.string,
+  amount: PropTypes.number,
   children: PropTypes.node
 }
 

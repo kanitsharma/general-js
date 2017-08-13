@@ -8,8 +8,8 @@ import HeadingHero from '../../static/Orange Juice.jpeg'
 
 const Home = ({ showNotifier }) =>
   <div>
-    <Swiftscroll>
-      <Landingsection hpos='center' vpos='center' background='linear-gradient(to top, #44107A 0%, #231557 100%)'>
+    <Swiftscroll amount={100}>
+      <Landingsection size='100vh' hpos='center' vpos='center' background='linear-gradient(to top, #44107A 0%, #231557 100%)'>
         <Hheader
           htext='general/js'
           btext='Give your Javascript Project a new home'
@@ -20,7 +20,7 @@ const Home = ({ showNotifier }) =>
           animation
         />
       </Landingsection>
-      <Landingsection hpos='center' vpos='center' background='linear-gradient(to top, #FF1361 0%, #44107A 100%)'>
+      <Landingsection size='100vh' hpos='center' vpos='center' background='linear-gradient(to top, #FF1361 0%, #44107A 100%)'>
         <Hheader
           htext='Shinobi'
           vtext='rajatsharma305/shinobi'
