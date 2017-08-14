@@ -8,7 +8,6 @@ const Landingsection = ({ children, hpos, vpos, background, size }) => {
     alignItems: hpos,
     justifyContent: vpos,
     background: background,
-    height: size
   }
   return (
     <div className='panel' style={basicstyle}>
@@ -18,7 +17,7 @@ const Landingsection = ({ children, hpos, vpos, background, size }) => {
 }
 
 Landingsection.propTypes = {
-  children: PropTypes.element,
+  children: PropTypes.node,
   hpos: PropTypes.string,
   vpos: PropTypes.string,
   background: PropTypes.string,
