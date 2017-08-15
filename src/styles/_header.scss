@@ -1,0 +1,51 @@
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: inherit;
+  color: #fff;
+  padding: 20px;
+}
+.nav-icon {
+  width: 50px;
+  height: 40px;
+  position: relative;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+.nav-icon span {
+  position: absolute;
+  height: 6px;
+  width: 100%;
+  background: #fff;
+  border-radius: 9px;
+  left: 0;
+  transition: .25s ease-in-out;
+}
+.nav-icon span:nth-child(1) {
+  top: 0px;
+  transform-origin: left center;
+}
+.nav-icon span:nth-child(2) {
+  top: 18px;
+  transform-origin: left center;
+}
+.nav-icon span:nth-child(3) {
+  top: 36px;
+  transform-origin: left center;
+}
+.nav-icon.open span:nth-child(1) {
+  transform: rotate(45deg);
+  top: -3px;
+  left: 8px;
+}
+.nav-icon.open span:nth-child(2) {
+  width: 0%;
+  opacity: 0;
+}
+.nav-icon.open span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 39px;
+  left: 8px;
+}
