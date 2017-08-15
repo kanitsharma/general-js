@@ -3,7 +3,6 @@ import PT from 'prop-types'
 import Gridcomponent from '../../components/gridcomponent'
 import Gridsection from '../../components/gridsection'
 import PackCard from '../../components/packcard'
-import Landingsection from '../../components/landingsection'
 
 class Showcase extends Component {
   componentDidMount () {
@@ -11,18 +10,23 @@ class Showcase extends Component {
   }
   render () {
     const bgcolor = {
-      height: '100vh',
-      background: '#44107A no-repeat fixed center'
+      height: '100%',
+      width: '100%',
+      background: '#44107A',
+      position: 'fixed',
+      top: '0',
+      left: '0',
+      zIndex: '-1'
     }
     const { jqueryDownload } = this.props
-    return <div style={bgcolor}>
-      <Landingsection hpos='center' vpos='center' size='100vh'>
-        <Gridcomponent templatecolumn='1fr 1fr 1fr' templaterow='1fr 1fr'>
-          {[1, 1, 2, 2, 2, 2].map((x, i) => <Gridsection column='auto / auto' row={'' + parseInt(i / 3)} key={i}>
+    return <div className='container'>
+      <div style={bgcolor} />
+      <Gridcomponent templatecolumn='1fr 1fr 1fr' templaterow='1fr 1fr'>
+        {[1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 3].map((x, i) =>
+          <Gridsection column='auto / auto' row={'' + parseInt(i / 3)} key={i}>
             <PackCard name='vue' data={jqueryDownload} />
           </Gridsection>)}
-        </Gridcomponent>
-      </Landingsection>
+      </Gridcomponent>
     </div>
   }
 }
