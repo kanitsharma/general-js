@@ -1,7 +1,7 @@
-import reducer from '../../futils/reducer'
+import reducer from '../futils/reducer'
 
 const Actionhandlers = {
-  TOGGLE_NAV: (state, action) => ({ ...state, shownav: action.payload.shownav })
+  TOGGLE_NAV: (state, action) => ({ ...state, shownav: !state.shownav })
 }
 
 const Init = { shownav: false }

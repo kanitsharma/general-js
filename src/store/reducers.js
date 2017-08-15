@@ -1,9 +1,11 @@
 import { combineReducers } from 'redux'
 import locationReducer from './location'
+import navtoggleReducer from '../connectors/reducer'
 
 export const makeRootReducer = (asyncReducers) => {
   return combineReducers({
     location: locationReducer,
+    togglenav: navtoggleReducer,
     ...asyncReducers
   })
 }

@@ -6,11 +6,12 @@ import { pick } from 'ramda'
 const Header = ({ togglenav, shownav }) => {
   return (
     <div className='header'>
-      <div className={`nav-icon ${shownav ? 'open' : ''}`} onClick={() => togglenav(!shownav)}>
+      <div className={`nav-icon ${shownav ? 'open' : ''}`} onClick={() => togglenav()}>
         <span />
         <span />
         <span />
       </div>
+      <h1>{shownav}</h1>
     </div>
   )
 }
@@ -21,11 +22,11 @@ Header.propTypes = {
 }
 
 const mapStateToProps = state => ({
-  ...pick(['shownav'])
+  ...pick(['shownav'], state.togglenav)
 })
 
 const mapDispatchToProps = dispatch => ({
-  togglenav: shownav => dispatch({ type: 'TOGGLE_NAV', payload: shownav })
+  togglenav: () => dispatch({ type: 'TOGGLE_NAV' })
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Header)
