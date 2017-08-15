@@ -12,7 +12,7 @@ class Showcase extends Component {
     const bgcolor = {
       height: '100%',
       width: '100%',
-      background: '#44107A',
+      background: 'linear-gradient(45deg, #93a5cf 0%, #e4efe9 100%)',
       position: 'fixed',
       top: '0',
       left: '0',
