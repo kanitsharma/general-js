@@ -8,11 +8,12 @@
   padding: 20px;
 }
 .nav-icon {
-  width: 50px;
-  height: 40px;
+  width: 60px;
+  height: 45px;
   position: relative;
   transition: .5s ease-in-out;
   cursor: pointer;
+  transform: scale(0.8);
 }
 .nav-icon span {
   position: absolute;
@@ -36,7 +37,7 @@
   transform-origin: left center;
 }
 .nav-icon.open span:nth-child(1) {
-  transform: rotate(58deg);
+  transform: rotate(45deg);
   top: -3px;
   left: 8px;
 }
@@ -45,7 +46,7 @@
   opacity: 0;
 }
 .nav-icon.open span:nth-child(3) {
-  transform: rotate(-58deg);
+  transform: rotate(-45deg);
   top: 39px;
   left: 8px;
 }
