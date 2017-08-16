@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from 'react-router'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { pick } from 'ramda'
 
 const Navmenu = ({ togglenav }) => <div className='menu-overlay'>
   <div className='menu'>
