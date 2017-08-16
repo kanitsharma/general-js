@@ -8,6 +8,7 @@
   padding: 20px;
 }
 
+
 //Menu icon styles
 .nav-icon {
   width: 60px;
@@ -53,7 +54,9 @@
   left: 8px;
 }
 
+
 //Side Menu styles
+
 .menu-overlay{
   display: flex;
   width: 100vw;
@@ -67,11 +70,13 @@
   z-index: 1;
 }
 .menu-item{
+  display: block;
   font-size: 5em;
   opacity: 0;
   cursor: pointer;
-  transform: translateY(50px);
+  transform: translateY(70px);
   color: white;
+  text-decoration: none;
 }
 .menu-item::after{
   margin: 10px 0px;
@@ -101,7 +106,7 @@
   animation: Slideright 0.5s cubic-bezier(0.5, 0, 0.5, 1);
 }
 .nav-leave.nav-leave-active {
-  animation: Slideleft 0.4s cubic-bezier(0.5, 0, 0.5, 1);
+  animation: Slideleft 0.5s cubic-bezier(0.5, 0, 0.5, 1);
 }
 
 @keyframes SlideUp {

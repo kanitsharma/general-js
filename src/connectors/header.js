@@ -1,5 +1,5 @@
 import React from 'react'
-import Navmenu from '../components/navmenu'
+import Navmenu from './navmenu'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { pick } from 'ramda'
@@ -15,7 +15,7 @@ const Header = ({ togglenav, shownav }) => {
           <span />
         </div>
       </div>
-      <ReactCSSTransitionGroup transitionName='nav' transitionEnterTimeout={1000} transitionLeaveTimeout={350}>
+      <ReactCSSTransitionGroup transitionName='nav' transitionEnterTimeout={1000} transitionLeaveTimeout={450}>
         {shownav && <Navmenu />}
       </ReactCSSTransitionGroup>
     </div>
