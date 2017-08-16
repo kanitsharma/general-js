@@ -69,7 +69,7 @@ class Hheader extends Component {
       transform : `translate(-${this.state.x}px,-${this.state.y}px)`,
       width : `${this.props.width}px`,
       height : `${this.props.height}px`,
-      backgroundColor : `#2574A9`,
+      background : `#FAC466`,
       transition : `all 0.1s ease`
     }
     const hover = event => {

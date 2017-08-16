@@ -2,13 +2,13 @@ import React from 'react'
 import PT from 'prop-types' // eslint-disable-line
 import { LineChart, Line } from 'recharts'
 
-const SampleGraph = ({ data, width, height }) =>
+export const SampleGraph = ({ data, width, height }) =>
   <LineChart width={width} height={height} data={data}
     margin={{ top: 5 }}>
     <defs>
       <linearGradient id='colorUv' x1='0' y1='0' x2='0' y2='1'>
-        <stop offset='5%' stopColor='#43e97b' stopOpacity={1} />
-        <stop offset='95%' stopColor='#38f9d7' stopOpacity={1} />
+        <stop offset='5%' stopColor='#486AB2' stopOpacity={1} />
+        <stop offset='95%' stopColor='#486AB2' stopOpacity={1} />
       </linearGradient>
     </defs>
     <Line type='monotone' dataKey='downloads' stroke='url(#colorUv)' />

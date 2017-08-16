@@ -2,28 +2,9 @@ import React, { Component } from 'react'
 import PT from 'prop-types'
 import Gridcomponent from '../../components/gridcomponent'
 import Gridsection from '../../components/gridsection'
-import PackCard from '../../components/packcard'
+import PackCard, { SampleGraph } from '../../components/packcard'
 import Hheader from '../../components/hover-header'
 import HeadingHero from '../../static/Orange Juice.jpeg'
-import { LineChart, Line } from 'recharts'
-
-const SampleGraph = ({ data, width, height }) =>
-  <LineChart width={width} height={height} data={data}
-    margin={{ top: 5 }}>
-    <defs>
-      <linearGradient id='colorUv' x1='0' y1='0' x2='0' y2='1'>
-        <stop offset='5%' stopColor='#43e97b' stopOpacity={1} />
-        <stop offset='95%' stopColor='#38f9d7' stopOpacity={1} />
-      </linearGradient>
-    </defs>
-    <Line type='monotone' dataKey='downloads' stroke='url(#colorUv)' />
-  </LineChart>
-
-SampleGraph.propTypes = {
-  data: PT.array,
-  width: PT.number,
-  height: PT.number
-}
 
 class Showcase extends Component {
   componentDidMount () {
@@ -33,7 +14,7 @@ class Showcase extends Component {
     const bgcolor = {
       height: '100%',
       width: '100%',
-      background: 'linear-gradient(45deg, #93a5cf 0%, #e4efe9 100%)',
+      background: 'linear-gradient(to top, #0074DB 0%, #49C8F7 100%)',
       position: 'fixed',
       top: '0',
       left: '0',
@@ -52,7 +33,7 @@ class Showcase extends Component {
             height='300'
             hcolor='#fff'
             component={vueDownload
-              ? <SampleGraph data={vueDownload} width={300} height={300} /> : null}
+              ? <SampleGraph data={vueDownload} width={300} height={300} color1='#fff' color2='#fff' /> : null}
             source={HeadingHero}
             boxpos='start' hpos='center' hsize='100'
             animation={false}
@@ -67,7 +48,7 @@ class Showcase extends Component {
             height='300'
             hcolor='#fff'
             component={vueDownload
-              ? <SampleGraph data={vueDownload} width={300} height={300} /> : null}
+              ? <SampleGraph data={vueDownload} width={300} height={300} color1='#fff' color2='#fff' /> : null}
             source={HeadingHero}
             boxpos='start' hpos='center' hsize='100'
             animation={false}
