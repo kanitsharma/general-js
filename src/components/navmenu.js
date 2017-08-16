@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Navmenu = props => <div className='menu-overlay slidein'>
+const Navmenu = props => <div className='menu-overlay'>
   <div className='menu'>
     <div className='menu-item'>Home</div>
     <div className='menu-item'>Projects</div>

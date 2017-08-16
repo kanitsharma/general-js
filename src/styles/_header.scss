@@ -96,11 +96,14 @@
   animation: SlideUp 0.5s 0.5s linear forwards;
 }
 
-
 //animations
-.slidein{
+.nav-enter.nav-enter-active {
   animation: Slideright 0.5s cubic-bezier(0.5, 0, 0.5, 1);
 }
+.nav-leave.nav-leave-active {
+  animation: Slideleft 0.4s cubic-bezier(0.5, 0, 0.5, 1);
+}
+
 @keyframes SlideUp {
   from{
     opacity: 0;
@@ -118,5 +121,14 @@
   }
   to{
     transform: translateX(0);
+  }
+}
+
+@keyframes Slideleft {
+  from{
+    transform: translateX(0);
+  }
+  to{
+    transform: translateX(-100vw);
   }
 }
