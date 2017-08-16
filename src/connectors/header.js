@@ -15,7 +15,7 @@ const Header = ({ togglenav, shownav }) => {
           <span />
         </div>
       </div>
-      <ReactCSSTransitionGroup transitionName='nav' transitionEnterTimeout={800} transitionLeaveTimeout={400}>
+      <ReactCSSTransitionGroup transitionName='nav' transitionEnterTimeout={1000} transitionLeaveTimeout={350}>
         {shownav && <Navmenu />}
       </ReactCSSTransitionGroup>
     </div>
