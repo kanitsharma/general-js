@@ -2,22 +2,24 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 2;
   background-color: inherit;
   color: #fff;
   padding: 20px;
 }
+
+//Menu icon styles
 .nav-icon {
   width: 60px;
   height: 45px;
   position: relative;
   transition: .5s ease-in-out;
   cursor: pointer;
-  transform: scale(0.8);
+  transform: scale(0.7);
 }
 .nav-icon span {
   position: absolute;
-  height: 6px;
+  height: 7px;
   width: 100%;
   background: #fff;
   border-radius: 9px;
@@ -49,4 +51,72 @@
   transform: rotate(-45deg);
   top: 39px;
   left: 8px;
+}
+
+//Side Menu styles
+.menu-overlay{
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8); //navmenu overlay background color
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+.menu-item{
+  font-size: 5em;
+  opacity: 0;
+  cursor: pointer;
+  transform: translateY(50px);
+  color: white;
+}
+.menu-item::after{
+  margin: 10px 0px;
+  display:block;
+  content: '';
+  border-bottom: solid 5px white; //mwnu underline color
+  transform: scaleX(0);
+  transform-origin:  0% 50%;
+  transition: transform 250ms ease-in-out;
+}
+.menu-item:hover:after {
+  transform: scaleX(1);
+}
+
+.menu-item:nth-child(1){
+  animation: SlideUp 0.3s 0.5s linear forwards;
+}
+.menu-item:nth-child(2){
+  animation: SlideUp 0.4s 0.5s linear forwards;
+}
+.menu-item:nth-child(3){
+  animation: SlideUp 0.5s 0.5s linear forwards;
+}
+
+
+//animations
+.slidein{
+  animation: Slideright 0.5s cubic-bezier(0.5, 0, 0.5, 1);
+}
+@keyframes SlideUp {
+  from{
+    opacity: 0;
+    transform: translateY(70px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes Slideright {
+  from{
+    transform: translateX(-100vw);
+  }
+  to{
+    transform: translateX(0);
+  }
 }

@@ -12,7 +12,7 @@ class Hheader extends Component {
       boxpos : `row`,
       vtextpos : -2,
       hpos : 0,
-      mpos : `auto`
+      mpos : `auto`,
     }
   }
   componentDidMount () {
@@ -62,19 +62,19 @@ class Hheader extends Component {
       left : `17%`,
       fontSize : `${this.props.hsize}px`,
       transform : `translate(${this.state.x}px,${this.state.y}px)`,
-      transition : `all 0.2s ease`
+      transition : `all 0.1s ease`
     }
     const transform2 = {
       transform : `translate(-${this.state.x}px,-${this.state.y}px)`,
       width : `${this.props.width}px`,
       height : `${this.props.height}px`,
       backgroundColor : `#eee`,
-      transition : `all 0.2s ease`
+      transition : `all 0.1s ease`
     }
     const hover = event => {
       if (this.props.animation) {
-        this.setState({ x : (event.pageX - document.getElementById('div').offsetLeft) * 0.1,
-          y : (event.pageY - document.getElementById('div').offsetTop) * 0.2 })
+        this.setState({ x : (event.pageX - document.getElementById('div').offsetLeft) * 0.05,
+          y : (event.pageY - document.getElementById('div').offsetTop) * 0.1 })
       }
     }
     const leave = event => {
@@ -82,7 +82,7 @@ class Hheader extends Component {
     }
     const enter = event => {
       if (this.props.animation) {
-        this.setState({ x : event.clientX * 0.05, y : event.clientY * 0.05 })
+        this.setState({ x : event.clientX * 0.01, y : event.clientY * 0.01 })
       }
     }
     return (

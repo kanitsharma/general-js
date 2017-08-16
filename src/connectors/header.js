@@ -1,17 +1,20 @@
 import React from 'react'
+import Navmenu from '../components/navmenu'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { pick } from 'ramda'
 
 const Header = ({ togglenav, shownav }) => {
   return (
-    <div className='header'>
-      <div className={`nav-icon ${shownav ? 'open' : ''}`} onClick={() => togglenav()}>
-        <span />
-        <span />
-        <span />
+    <div>
+      <div className='header'>
+        <div className={`nav-icon ${shownav ? 'open' : ''}`} onClick={() => togglenav()}>
+          <span />
+          <span />
+          <span />
+        </div>
       </div>
-      <h1>{shownav}</h1>
+      {shownav ? <Navmenu /> : null}
     </div>
   )
 }

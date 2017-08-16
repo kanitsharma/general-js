@@ -18,13 +18,13 @@ class Showcase extends Component {
       left: '0',
       zIndex: '-1'
     }
-    const { jqueryDownload } = this.props
+    const { vueDownload } = this.props
     return <div className='container'>
       <div style={bgcolor} />
       <Gridcomponent templatecolumn='1fr 1fr 1fr' templaterow='1fr 1fr'>
         {[1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 3].map((x, i) =>
           <Gridsection column='auto / auto' row={'' + parseInt(i / 3)} key={i}>
-            <PackCard name='vue' data={jqueryDownload} />
+            <PackCard name='vue' data={vueDownload} />
           </Gridsection>)}
       </Gridcomponent>
     </div>
@@ -33,9 +33,9 @@ class Showcase extends Component {
 
 Showcase.propTypes = {
   getfamous: PT.func,
-  jqueryDownload: PT.array,
+  // jqueryDownload: PT.array,
   // reactDownload: PT.array,
   // angularDownload: PT.array,
-  // vueDownload: PT.array
+  vueDownload: PT.array
 }
 export default Showcase
