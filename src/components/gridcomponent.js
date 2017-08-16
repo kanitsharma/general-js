@@ -6,7 +6,7 @@ const Gridcomponent = ({ children, templatecolumn, templaterow }) => {
     display: 'grid',
     gridTemplateColumn: templatecolumn,
     gridTemplateRow: templaterow,
-    gridGap: '5vh 3vw',
+    gridGap: '5vh 5vw',
   }
   return (
     <div style={gridContainer}>

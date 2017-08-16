@@ -35,7 +35,8 @@ class Hheader extends Component {
       height : `auto`,
       display : `flex`,
       flexDirection : `${this.state.boxpos}`,
-      position : `relative`
+      position : `relative`,
+      margin: '5vh 0'
     }
     const vertical = {
       writingMode : `vertical-lr`,
@@ -57,7 +58,7 @@ class Hheader extends Component {
     }
     const transform1 = {
       position : `absolute`,
-      color: `white`,
+      color: `${this.props.hcolor}`,
       top : `${this.state.hpos}%`,
       left : `17%`,
       fontSize : `${this.props.hsize}px`,
@@ -68,7 +69,7 @@ class Hheader extends Component {
       transform : `translate(-${this.state.x}px,-${this.state.y}px)`,
       width : `${this.props.width}px`,
       height : `${this.props.height}px`,
-      backgroundColor : `#eee`,
+      backgroundColor : `#2574A9`,
       transition : `all 0.1s ease`
     }
     const hover = event => {
@@ -113,7 +114,8 @@ Hheader.propTypes = {
   height: PropTypes.string,
   hsize: PropTypes.string,
   hpos: PropTypes.string,
-  boxpos: PropTypes.string
+  boxpos: PropTypes.string,
+  hcolor: PropTypes.string
 }
 
 export default Hheader
