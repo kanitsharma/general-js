@@ -1,8 +1,8 @@
+// PackCard
 .card-outside {
-  // background-color: #fcfcfc;
-  background-image: linear-gradient(#89f7fe 0%, #66a6ff 100%);
+  background-color: #fcfcfc;
   width: 270px;
-  color: #fcfcfc;
+  color: $secondry-color;
 
   .card-body {
     padding: 20px;
@@ -22,7 +22,7 @@
 
   &:hover {
     transform: translateY(-2px);
-    box-shadow: 0 0 20px 0 #8798ba;
+    box-shadow: 0 2px 10px $accent-color-shadow;
     transition: transform 0.3s, -webkit-transform 0.3s;
   }
 }
@@ -43,18 +43,24 @@
  display: flex;
  position: fixed;
  top: 0;
- left: 0;
- height: 90vh;
+ right: 0;
+ height: 100vh;
  flex-direction: column;
  align-items: center;
  justify-content: center;
- padding: 50px 25px;
+ padding: 0 25px;
 }
 
 .tag{
   color: white;
   writing-mode: vertical-lr;
-  font-size: 1.3em;
+  font-size: 1.1em;
   margin: auto;
   cursor: pointer;
+}
+
+//Hover Hheader
+.headerbox{
+  background-color: $accent-color;
+  box-shadow: 2px 5px 30px $accent-color-shadow;
 }

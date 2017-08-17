@@ -19,18 +19,10 @@ class Showcase extends Component {
       'Vue',
       'Jquery'
     ]
-    const bgcolor = {
-      height: '100%',
-      width: '100%',
-      background: 'linear-gradient(to top, #0074DB 0%, #49C8F7 100%)',
-      position: 'fixed',
-      top: '0',
-      left: '0',
-      zIndex: '-1'
-    }
+
     const { vueDownload } = this.props
     return <div className='container'>
-      <div style={bgcolor} />
+      <div className='background' />
       <VerticalSection tags={tags} />
       <Gridcomponent templatecolumn='1fr 1fr' templaterow='1fr'>
         <Gridsection column='1 / 2' row='1'>
@@ -42,7 +34,7 @@ class Showcase extends Component {
             height='300'
             hcolor='#fff'
             component={vueDownload
-              ? <SampleGraph data={vueDownload} width={300} height={300} color1='#fff' color2='#fff' /> : null}
+              ? <SampleGraph data={vueDownload} width={300} height={300} /> : null}
             source={HeadingHero}
             boxpos='start' hpos='center' hsize='100'
             animation={false}
@@ -57,7 +49,7 @@ class Showcase extends Component {
             height='300'
             hcolor='#fff'
             component={vueDownload
-              ? <SampleGraph data={vueDownload} width={300} height={300} color1='#fff' color2='#fff' /> : null}
+              ? <SampleGraph data={vueDownload} width={300} height={300} /> : null}
             source={HeadingHero}
             boxpos='start' hpos='center' hsize='100'
             animation={false}

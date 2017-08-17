@@ -5,13 +5,7 @@ import { LineChart, Line } from 'recharts'
 export const SampleGraph = ({ data, width, height }) =>
   <LineChart width={width} height={height} data={data}
     margin={{ top: 5 }}>
-    <defs>
-      <linearGradient id='colorUv' x1='0' y1='0' x2='0' y2='1'>
-        <stop offset='5%' stopColor='#486AB2' stopOpacity={1} />
-        <stop offset='95%' stopColor='#486AB2' stopOpacity={1} />
-      </linearGradient>
-    </defs>
-    <Line type='basis' dataKey='downloads' stroke='#fcfcfc' />
+    <Line type='basis' dataKey='downloads' stroke='#C3073F' />
   </LineChart>
 
 SampleGraph.propTypes = {

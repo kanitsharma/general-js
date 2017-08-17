@@ -69,7 +69,6 @@ class Hheader extends Component {
       transform : `translate(-${this.state.x}px,-${this.state.y}px)`,
       width : `${this.props.width}px`,
       height : `${this.props.height}px`,
-      background : `#FAC466`,
       transition : `all 0.1s ease`
     }
     const hover = event => {
@@ -88,7 +87,7 @@ class Hheader extends Component {
     }
     return (
       <div onMouseMove={hover} onMouseEnter={enter} onMouseLeave={leave} style={container} id='div'>
-        <div style={transform2}>
+        <div style={transform2} className='headerbox'>
           {this.props.component || <img src={this.props.source} width={this.props.width} height={this.props.height} />}
         </div>
         <p style={vertical}>{this.props.vtext}</p>
