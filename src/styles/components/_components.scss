@@ -1,6 +1,6 @@
 // PackCard
 .card-outside {
-  background-color: #fcfcfc;
+  background-color: $light;
   width: 270px;
   color: $secondry-color;
 
@@ -54,7 +54,7 @@
 .tag{
   color: white;
   writing-mode: vertical-lr;
-  font-size: 1.1em;
+  font-size: 1em;
   margin: auto;
   cursor: pointer;
 }

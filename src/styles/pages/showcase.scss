@@ -17,3 +17,24 @@
   left: 0;
   z-Index: -1;
 }
+
+.searchbar{
+  background-color: $primary-color;
+  padding: .8em 1.5em;
+  font-size: 1.5em;
+  color: $light;
+  border: none;
+  width: 30vw;
+  border-bottom: 2px solid $light;
+  background-image:url('../static/search.png');
+  background-repeat:no-repeat;
+  background-position:left center;
+  background-size: auto;
+	margin: 2vh;
+}
+.searchbar:focus{
+  outline: none;
+}
+.searchbar::placeholder{
+  color: $light;
+}

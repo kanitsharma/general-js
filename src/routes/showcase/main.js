@@ -24,6 +24,9 @@ class Showcase extends Component {
     return <div className='container'>
       <div className='background' />
       <VerticalSection tags={tags} />
+      <div className='topbar'>
+        <input type='text' name='search' placeholder='Search..' className='searchbar' />
+      </div>
       <Gridcomponent templatecolumn='1fr 1fr' templaterow='1fr'>
         <Gridsection column='1 / 2' row='1'>
           <Hheader
