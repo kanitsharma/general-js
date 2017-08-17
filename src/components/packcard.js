@@ -11,7 +11,7 @@ const SampleGraph = ({ data, width, height }) =>
         <stop offset='95%' stopColor='#38f9d7' stopOpacity={1} />
       </linearGradient>
     </defs>
-    <Line type='monotone' dataKey='downloads' stroke='url(#colorUv)' />
+    <Line type='basis' dataKey='downloads' stroke='#fcfcfc' />
   </LineChart>
 
 SampleGraph.propTypes = {
@@ -21,14 +21,16 @@ SampleGraph.propTypes = {
 }
 
 const PackCard = ({ name, data }) =>
-  <div className='card-body'>
-    <div className='card-top'>
-      <div className='card-heading'>{name}</div>
-      <div>34⭐️/10🍴</div>
-    </div>
-    <div className='card-desc'>
-      Retask is a simple task queue implementation written for human beings. It provides generic solution to
-      create and manage task queues.
+  <div className='card-outside'>
+    <div className='card-body'>
+      <div className='card-top'>
+        <div className='card-heading'>{name}</div>
+        <div>34⭐️/10🍴</div>
+      </div>
+      <div className='card-desc'>
+        Retask is a simple task queue implementation written for human beings. It provides generic solution to
+        create and manage task queues.
+      </div>
     </div>
     <SampleGraph data={data} height={100} width={270} />
   </div>
