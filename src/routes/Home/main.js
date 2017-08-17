@@ -15,6 +15,7 @@ const Home = ({ showNotifier }) =>
           btext='Give your Javascript Project a new home'
           width='300'
           height='300'
+          hcolor='#fff'
           source={HeadingHero}
           boxpos='start' hpos='center' hsize='80'
           animation
@@ -27,6 +28,7 @@ const Home = ({ showNotifier }) =>
           btext='Ninjaic Starter for Redux'
           width='270'
           height='270'
+          hcolor='#fff'
           source={HeadingHero}
           boxpos='start' hpos='center' hsize='80'
           animation={false}

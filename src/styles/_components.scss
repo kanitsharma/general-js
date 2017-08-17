@@ -22,7 +22,17 @@
 
   &:hover {
     transform: translateY(-2px);
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
+    box-shadow: 0 0 20px 0 #8798ba;
     transition: transform 0.3s, -webkit-transform 0.3s;
   }
+}
+//Swift Scroll
+.well {
+  transition: 1s cubic-bezier(0.5, 0, 0.5, 1);
+}
+
+.panel {
+  overflow: hidden;
+  box-sizing: border-box;
+  height: 100vh;
 }
