@@ -5,12 +5,20 @@ import Gridsection from '../../components/gridsection'
 import PackCard, { SampleGraph } from '../../components/packcard'
 import Hheader from '../../components/hover-header'
 import HeadingHero from '../../static/Orange Juice.jpeg'
+import VerticalSection from '../../components/verticalsection'
 
 class Showcase extends Component {
   componentDidMount () {
     this.props.getfamous()
   }
   render () {
+    const tags = [
+      'Webpack',
+      'React',
+      'Angular',
+      'Vue',
+      'Jquery'
+    ]
     const bgcolor = {
       height: '100%',
       width: '100%',
@@ -23,6 +31,7 @@ class Showcase extends Component {
     const { vueDownload } = this.props
     return <div className='container'>
       <div style={bgcolor} />
+      <VerticalSection tags={tags} />
       <Gridcomponent templatecolumn='1fr 1fr' templaterow='1fr'>
         <Gridsection column='1 / 2' row='1'>
           <Hheader
