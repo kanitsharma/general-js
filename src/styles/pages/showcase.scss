@@ -20,8 +20,8 @@
 
 .searchbar{
   background-color: $primary-color;
-  padding: .8em 1.5em;
-  font-size: 1.5em;
+  padding: .8em 2em;
+  font-size: 1.3em;
   color: $light;
   border: none;
   width: 30vw;
@@ -30,7 +30,8 @@
   background-repeat:no-repeat;
   background-position:left center;
   background-size: auto;
-	margin: 2vh;
+	margin: 1vh;
+	font-family: 'Roboto Mono', monospace;
 }
 .searchbar:focus{
   outline: none;

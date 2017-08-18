@@ -40,15 +40,15 @@
 
 //VerticalSection
 .vertical{
- display: flex;
- position: fixed;
- top: 0;
- right: 0;
- height: 100vh;
- flex-direction: column;
- align-items: center;
- justify-content: center;
- padding: 0 25px;
+  display: flex;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 25px;
 }
 
 .tag{
@@ -59,8 +59,11 @@
   cursor: pointer;
 }
 
+.active{
+  color: $accent-color;
+}
+
 //Hover Hheader
 .headerbox{
   background-color: $accent-color;
-  box-shadow: 2px 5px 30px $accent-color-shadow;
 }
