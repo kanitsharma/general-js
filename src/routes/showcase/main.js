@@ -27,7 +27,7 @@ class Showcase extends Component {
       <div className='topbar'>
         <input type='text' name='search' placeholder='Search..' className='searchbar' />
       </div>
-      <Gridcomponent templatecolumn='1fr 1fr' templaterow='1fr'>
+      <Gridcomponent templatecolumn='1fr 1fr' templaterow='1fr' gridGap='5vh 5vw'>
         <Gridsection column='1 / 2' row='1'>
           <Hheader
             htext='vue'
@@ -59,7 +59,7 @@ class Showcase extends Component {
             />
         </Gridsection>
       </Gridcomponent>
-      <Gridcomponent templatecolumn='1fr 1fr 1fr' templaterow='1fr 1fr'>
+      <Gridcomponent templatecolumn='1fr 1fr 1fr' templaterow='1fr 1fr' gridGap='5vh 5vw'>
         {[1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 3].map((x, i) =>
           <Gridsection column='auto / auto' row={'' + parseInt(i / 3)} key={i}>
             <PackCard name='vue' data={vueDownload} />

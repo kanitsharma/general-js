@@ -5,7 +5,7 @@ import { LineChart, Line } from 'recharts'
 export const SampleGraph = ({ data, width, height }) =>
   <LineChart width={width} height={height} data={data}
     margin={{ top: 5 }}>
-    <Line type='monotone' dataKey='downloads' stroke='#C3073F' />
+    <Line type='monotone' dataKey='downloads' stroke='#C3073F' strokeWidth={2} />
   </LineChart>
 
 SampleGraph.propTypes = {
@@ -26,7 +26,9 @@ const PackCard = ({ name, data }) =>
         create and manage task queues.
       </div>
     </div>
-    <SampleGraph data={data} height={100} width={270} />
+    <div className='card-graph'>
+      <SampleGraph data={data} height={110} width={280} />
+    </div>
   </div>
 
 PackCard.propTypes = {

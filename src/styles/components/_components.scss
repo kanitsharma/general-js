@@ -1,29 +1,33 @@
 // PackCard
 .card-outside {
   background-color: $light;
-  width: 270px;
-  color: $secondry-color;
+  width: 280px;
+  color: $secondry-color3;
+  transition: all 0.2s linear;
 
   .card-body {
     padding: 20px;
+    font-size: 1em;
+    line-height: 1.6em;
 
     .card-top {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
-      padding-bottom: 10px;
+      padding-bottom: 2em;
+      color: $secondry-color;
 
       .card-heading {
         font-size: 2em;
+        font-weight: 400;
       }
     }
   }
 
   &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 2px 10px $accent-color-shadow;
-    transition: transform 0.3s, -webkit-transform 0.3s;
+    transform: translateY(-3px);
+    box-shadow: 2px 2px 30px 0 $primary-color-shadow;
   }
 }
 
@@ -39,19 +43,19 @@
 }
 
 //VerticalSection
-.vertical{
-  display: flex;
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 100vh;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 0 25px;
+.vertical {
+display: flex;
+position: fixed;
+top: 0;
+right: 0;
+height: 100vh;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+padding: 0 25px;
 }
 
-.tag{
+.tag {
   color: white;
   writing-mode: vertical-lr;
   font-size: 1em;
@@ -59,11 +63,12 @@
   cursor: pointer;
 }
 
-.active{
-  color: $accent-color;
+.active {
+  border-left: 2px solid $light;
+  padding-left: 5px;
 }
 
 //Hover Hheader
-.headerbox{
+.headerbox {
   background-color: $accent-color;
 }
