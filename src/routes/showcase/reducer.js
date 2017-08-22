@@ -9,10 +9,7 @@ import reducer from '../../futils/reducer'
 // ------------------------------------
 const ACTION_HANDLERS = {
   FAMOUSDATA: (s, a) => ({ ...s,
-    jqueryDownload: a.payload.jquery,
-    reactDownload: a.payload.react,
-    angularDownload: a.payload.angular,
-    vueDownload: a.payload.vue
+    Downloads: a.payload.Downloads.downloads
   })
 }
 
@@ -20,10 +17,7 @@ const ACTION_HANDLERS = {
 // Reducer
 // ------------------------------------
 const initialState = {
-  jqueryDownload: [],
-  reactDownload: [],
-  angularDownload: [],
-  vueDownload: []
+  Downloads: []
 }
 
 export default reducer(initialState, ACTION_HANDLERS)

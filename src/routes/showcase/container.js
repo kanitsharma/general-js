@@ -13,11 +13,13 @@ import MainComponent from './main'
     implementing our wrapper around increment; the component doesn't care   */
 
 const mapDispatchToProps = dispatch => ({
-  getfamous: () => dispatch(actionSpreader('GETFAMOUS'))
+  getfamous: (tag) => {
+    dispatch(actionSpreader('GETFAMOUS', { tag }))
+  }
 })
 
 const mapStateToProps = (state) => ({
-  ...pick(['jqueryDownload', 'reactDownload', 'angularDownload', 'vueDownload'], state.showcase)
+  ...pick(['Downloads'], state.showcase)
 })
 
 /*  Note: mapStateToProps is where you should use `reselect` to create selectors, ie:

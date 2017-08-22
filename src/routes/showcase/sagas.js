@@ -4,16 +4,13 @@ import request from '../../utils/request'
 
 const packageInfoUrl = pack => `https://api.npmjs.org/downloads/range/last-month/${pack}`
 
-export function * getFamousListener () {
+export function * getFamousListener (action) {
   try {
-    const [ jqueryData, reactData, angularData, vueData ] = yield all([
-      call(request, packageInfoUrl('jquery')),
-      call(request, packageInfoUrl('react')),
-      call(request, packageInfoUrl('angular')),
-      call(request, packageInfoUrl('vue'))
+    const [ downloadedData ] = yield all([
+      call(request, packageInfoUrl(action.payload.tag))
     ])
     yield put(actionSpreader('FAMOUSDATA', {
-      jquery: jqueryData.downloads, react:reactData.downloads, angular:angularData.downloads, vue: vueData.downloads
+      Downloads: downloadedData
     }))
   } catch (e) {
     yield put(actionSpreader('GETFAMOUSERROR'))

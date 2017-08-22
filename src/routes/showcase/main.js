@@ -9,25 +9,24 @@ import VerticalSection from '../../components/verticalsection'
 
 class Showcase extends Component {
   componentDidMount () {
-    this.props.getfamous()
+    this.props.getfamous('react')
   }
   render () {
     const tags = [
-      'Webpack',
-      'React',
-      'Angular',
-      'Vue',
-      'Jquery'
+      'webpack',
+      'react',
+      'angular',
+      'vue',
+      'jquery'
     ]
-
-    const { vueDownload } = this.props
+    const { Downloads } = this.props
     return <div className='container'>
       <div className='background' />
-      <VerticalSection tags={tags} />
+      <VerticalSection tags={tags} click={(tag) => this.props.getfamous(tag)} />
       <div className='topbar'>
         <input type='text' name='search' placeholder='Search..' className='searchbar' />
       </div>
-      <Gridcomponent templatecolumn='1fr 1fr' templaterow='1fr' gridGap='5vh 5vw'>
+      <Gridcomponent templatecolumn='1fr 1fr' templaterow='1fr' gridGap='5vh 2vw'>
         <Gridsection column='1 / 2' row='1'>
           <Hheader
             htext='vue'
@@ -36,8 +35,8 @@ class Showcase extends Component {
             width='300'
             height='300'
             hcolor='#fff'
-            component={vueDownload
-              ? <SampleGraph data={vueDownload} width={300} height={300} /> : null}
+            component={Downloads
+              ? <SampleGraph data={Downloads} width={300} height={300} /> : null}
             source={HeadingHero}
             boxpos='start' hpos='center' hsize='100'
             animation={false}
@@ -51,8 +50,8 @@ class Showcase extends Component {
             width='300'
             height='300'
             hcolor='#fff'
-            component={vueDownload
-              ? <SampleGraph data={vueDownload} width={300} height={300} /> : null}
+            component={Downloads
+              ? <SampleGraph data={Downloads} width={300} height={300} /> : null}
             source={HeadingHero}
             boxpos='start' hpos='center' hsize='100'
             animation={false}
@@ -62,7 +61,7 @@ class Showcase extends Component {
       <Gridcomponent templatecolumn='1fr 1fr 1fr' templaterow='1fr 1fr' gridGap='5vh 5vw'>
         {[1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 3].map((x, i) =>
           <Gridsection column='auto / auto' row={'' + parseInt(i / 3)} key={i}>
-            <PackCard name='vue' data={vueDownload} />
+            <PackCard name='vue' data={Downloads} />
           </Gridsection>)}
       </Gridcomponent>
     </div>
@@ -74,6 +73,6 @@ Showcase.propTypes = {
   // jqueryDownload: PT.array,
   // reactDownload: PT.array,
   // angularDownload: PT.array,
-  vueDownload: PT.array
+  Downloads: PT.array
 }
 export default Showcase
