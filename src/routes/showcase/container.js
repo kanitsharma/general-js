@@ -19,7 +19,7 @@ const mapDispatchToProps = dispatch => ({
 })
 
 const mapStateToProps = (state) => ({
-  ...pick(['Downloads'], state.showcase)
+  ...pick(['Downloads', 'active'], state.showcase)
 })
 
 /*  Note: mapStateToProps is where you should use `reselect` to create selectors, ie:

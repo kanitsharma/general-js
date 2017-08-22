@@ -19,10 +19,10 @@ class Showcase extends Component {
       'vue',
       'jquery'
     ]
-    const { Downloads } = this.props
+    const { Downloads, active } = this.props
     return <div className='container'>
       <div className='background' />
-      <VerticalSection tags={tags} click={(tag) => this.props.getfamous(tag)} />
+      <VerticalSection active={active} tags={tags} click={(tag) => this.props.getfamous(tag)} />
       <div className='topbar'>
         <input type='text' name='search' placeholder='Search..' className='searchbar' />
       </div>
@@ -73,6 +73,7 @@ Showcase.propTypes = {
   // jqueryDownload: PT.array,
   // reactDownload: PT.array,
   // angularDownload: PT.array,
-  Downloads: PT.array
+  Downloads: PT.array,
+  active: PT.string
 }
 export default Showcase
