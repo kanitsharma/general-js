@@ -14,6 +14,7 @@ const ACTION_HANDLERS = {
     loading: false
   }),
   LOADER: (s, a) => ({
+    ...s,
     loading: a.payload.loading
   })
 }

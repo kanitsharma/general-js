@@ -1,0 +1,52 @@
+//animations
+.nav-enter.nav-enter-active {
+  animation: Slideright 0.5s cubic-bezier(0.5, 0, 0.5, 1);
+}
+.nav-leave.nav-leave-active {
+  animation: Fadeout 0.5s cubic-bezier(0.5, 0, 0.5, 1);
+}
+
+.loader-enter.nav-enter-active {
+  animation: Fadein 0.5s cubic-bezier(0.5, 0, 0.5, 1);
+}
+.loader-leave.nav-leave-active {
+  animation: Fadeout 0.5s cubic-bezier(0.5, 0, 0.5, 1);
+}
+
+@keyframes SlideUp {
+  from{
+    opacity: 0;
+    transform: translateY(70px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes Slideright {
+  from{
+    transform: translateX(-100vw);
+  }
+  to{
+    transform: translateX(0);
+  }
+}
+
+@keyframes Fadein {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+@keyframes Fadeout {
+  from{
+    opacity: 1;
+  }
+  to{
+    opacity: 0;
+  }
+}
