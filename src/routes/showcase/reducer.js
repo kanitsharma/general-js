@@ -10,7 +10,11 @@ import reducer from '../../futils/reducer'
 const ACTION_HANDLERS = {
   FAMOUSDATA: (s, a) => ({ ...s,
     Downloads: a.payload.Downloads.downloads,
-    active: a.payload.Downloads.package
+    active: a.payload.Downloads.package,
+    loading: false
+  }),
+  LOADER: (s, a) => ({
+    loading: a.payload.loading
   })
 }
 
@@ -19,7 +23,8 @@ const ACTION_HANDLERS = {
 // ------------------------------------
 const initialState = {
   Downloads: [],
-  active: ''
+  active: '',
+  loading: false
 }
 
 export default reducer(initialState, ACTION_HANDLERS)

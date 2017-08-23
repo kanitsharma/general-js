@@ -5,6 +5,9 @@ import request from '../../utils/request'
 const packageInfoUrl = pack => `https://api.npmjs.org/downloads/range/last-month/${pack}`
 
 export function * getFamousListener (action) {
+  yield put(actionSpreader('LOADER', {
+    loading: true
+  }))
   try {
     const [ downloadedData ] = yield all([
       call(request, packageInfoUrl(action.payload.tag))

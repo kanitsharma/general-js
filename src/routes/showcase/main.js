@@ -6,6 +6,7 @@ import PackCard, { SampleGraph } from '../../components/packcard'
 import Hheader from '../../components/hover-header'
 import HeadingHero from '../../static/Orange Juice.jpeg'
 import VerticalSection from '../../components/verticalsection'
+import Loader from '../../components/loader'
 
 class Showcase extends Component {
   componentDidMount () {
@@ -19,10 +20,11 @@ class Showcase extends Component {
       'vue',
       'jquery'
     ]
-    const { Downloads, active } = this.props
+    const { Downloads, active, loading } = this.props
     return <div className='container'>
       <div className='background' />
       <VerticalSection active={active} tags={tags} click={(tag) => this.props.getfamous(tag)} />
+      <Loader loading={loading} />
       <div className='topbar'>
         <input type='text' name='search' placeholder='Search..' className='searchbar' />
       </div>
@@ -70,10 +72,8 @@ class Showcase extends Component {
 
 Showcase.propTypes = {
   getfamous: PT.func,
-  // jqueryDownload: PT.array,
-  // reactDownload: PT.array,
-  // angularDownload: PT.array,
   Downloads: PT.array,
-  active: PT.string
+  active: PT.string,
+  loading: PT.bool
 }
 export default Showcase
