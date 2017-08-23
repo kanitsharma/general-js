@@ -61,6 +61,11 @@ padding: 0 25px;
   font-size: 1em;
   margin: auto;
   cursor: pointer;
+  transition: all 1s linear;
+}
+
+.tag:hover{
+
 }
 
 .active {

@@ -29,7 +29,7 @@ class Showcase extends Component {
       <Gridcomponent templatecolumn='1fr 1fr' templaterow='1fr' gridGap='5vh 2vw'>
         <Gridsection column='1 / 2' row='1'>
           <Hheader
-            htext='vue'
+            htext={active}
             vtext='vuejs/vue'
             btext='A progressive, incrementally-adoptable JavaScript framework for building UI on the web.'
             width='300'
@@ -38,13 +38,13 @@ class Showcase extends Component {
             component={Downloads
               ? <SampleGraph data={Downloads} width={300} height={300} /> : null}
             source={HeadingHero}
-            boxpos='start' hpos='center' hsize='100'
+            boxpos='start' hpos='center' hsize='90'
             animation={false}
             />
         </Gridsection>
         <Gridsection column='2 / 3' row='1'>
           <Hheader
-            htext='vue'
+            htext={active}
             vtext='vuejs/vue'
             btext='A progressive, incrementally-adoptable JavaScript framework for building UI on the web.'
             width='300'
@@ -53,7 +53,7 @@ class Showcase extends Component {
             component={Downloads
               ? <SampleGraph data={Downloads} width={300} height={300} /> : null}
             source={HeadingHero}
-            boxpos='start' hpos='center' hsize='100'
+            boxpos='start' hpos='center' hsize='90'
             animation={false}
             />
         </Gridsection>
