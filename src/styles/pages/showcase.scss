@@ -20,15 +20,15 @@
 
 .searchbar{
   background-color: $primary-color;
-  padding: .8em 2em;
-  font-size: 1.3em;
+  padding: 0.7em 2.5em;
+  font-size: 1.5em;
   color: $light;
   border: none;
   width: 30vw;
-  border-bottom: 2px solid $light;
+  border: 3px solid $light;
   background-image:url('../static/search.png');
   background-repeat:no-repeat;
-  background-position:left center;
+  background-position:3% 50%;
   background-size: auto;
 	margin: 1vh;
 	font-family: 'Roboto Mono', monospace;

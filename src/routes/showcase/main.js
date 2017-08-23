@@ -7,6 +7,7 @@ import Hheader from '../../components/hover-header'
 import HeadingHero from '../../static/Orange Juice.jpeg'
 import VerticalSection from '../../components/verticalsection'
 import Loader from '../../components/loader'
+import Searchbox from '../../components/searchbox'
 
 class Showcase extends Component {
   componentDidMount () {
@@ -25,9 +26,7 @@ class Showcase extends Component {
       <div className='background' />
       <VerticalSection active={active} tags={tags} click={(tag) => this.props.getfamous(tag)} />
       <Loader loading={loading} />
-      <div className='topbar'>
-        <input type='text' name='search' placeholder='Search..' className='searchbar' />
-      </div>
+      <Searchbox />
       <Gridcomponent templatecolumn='1fr 1fr' templaterow='1fr' gridGap='5vh 2vw'>
         <Gridsection column='1 / 2' row='1'>
           <Hheader
@@ -63,7 +62,7 @@ class Showcase extends Component {
       <Gridcomponent templatecolumn='1fr 1fr 1fr' templaterow='1fr 1fr' gridGap='5vh 5vw'>
         {[1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 3].map((x, i) =>
           <Gridsection column='auto / auto' row={'' + parseInt(i / 3)} key={i}>
-            <PackCard name='vue' data={Downloads} />
+            <PackCard name={active} data={Downloads} />
           </Gridsection>)}
       </Gridcomponent>
     </div>

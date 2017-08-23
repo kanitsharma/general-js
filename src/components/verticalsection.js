@@ -4,7 +4,9 @@ import PropTypes from 'prop-types'
 const VerticalSection = ({ tags, click, active }) =>
   <div className='vertical'>
     {tags.map((tag, i) =>
-      <div className={`tag ${tag === active ? 'active' : ''}`} onClick={() => click(tag)} key={i}>#{tag}</div>)
+      <div className={`tag`} onClick={() => click(tag)} key={i}>#{tag}
+        <span className={tag === active ? 'active' : ''} />
+      </div>)
     }
   </div>
 
