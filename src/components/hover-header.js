@@ -61,7 +61,7 @@ class Hheader extends Component {
       color: `${this.props.hcolor}`,
       top : `${this.state.hpos}%`,
       left : `17%`,
-      fontSize : `${this.props.hsize}px`,
+      fontSize : `${this.props.hsize}em`,
       transform : `translate(${this.state.x}px,${this.state.y}px)`,
       transition : `all 0.1s ease`
     }

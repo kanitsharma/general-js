@@ -31,6 +31,32 @@
   }
 }
 
+
+//Gridcomponent
+.grid{
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 3em;
+}
+
+@media only screen and (max-width: 1500px) {
+  .grid{
+    grid-template-columns: repeat(3, auto);
+  }
+}
+
+@media only screen and (max-width: 1120px) {
+  .grid{
+    grid-template-columns: repeat(2, auto);
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .grid{
+    grid-template-columns: repeat(1, auto);
+  }
+}
+
 //Swift Scroll
 .well {
   transition: 1s cubic-bezier(0.5, 0, 0.5, 1);
@@ -74,13 +100,14 @@
   border-left:8px solid #fff;
 }
 
+
 //Hover Hheader
 .headerbox {
   background-color: $accent-color;
 }
 
-//Loader
 
+//Loader
 .loader-overlay {
   position: fixed;
   display: flex;
@@ -92,4 +119,28 @@
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+//Searchbar
+.searchbar{
+  background-color: $primary-color;
+  padding: 0.7em 2.5em;
+  font-size: 1.5em;
+  color: $light;
+  border: none;
+  width: 30vw;
+  border: 3px solid $light;
+  background-image:url('../static/search.png');
+  background-repeat:no-repeat;
+  background-position:3% 50%;
+  background-size: auto;
+	margin: 1vh;
+	font-family: 'Roboto Mono', monospace;
+}
+.searchbar:focus{
+  outline: none;
+}
+.searchbar::placeholder{
+  color: $light;
 }

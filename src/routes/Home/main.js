@@ -17,7 +17,7 @@ const Home = ({ showNotifier }) =>
           height='300'
           hcolor='#fff'
           source={HeadingHero}
-          boxpos='start' hpos='center' hsize='80'
+          boxpos='start' hpos='center' hsize='5'
           animation
         />
       </Landingsection>
@@ -30,7 +30,7 @@ const Home = ({ showNotifier }) =>
           height='270'
           hcolor='#fff'
           source={HeadingHero}
-          boxpos='start' hpos='center' hsize='80'
+          boxpos='start' hpos='center' hsize='5'
           animation={false}
         />
       </Landingsection>
