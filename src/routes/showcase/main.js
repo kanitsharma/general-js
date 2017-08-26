@@ -26,6 +26,7 @@ class Showcase extends Component {
       <VerticalSection active={active} tags={tags} click={(tag) => this.props.getfamous(tag)} />
       <Loader loading={loading} />
       <Searchbox />
+      <div className='grid-heading'>Popular Packages</div>
       <div className='row-container'>
         <Hheader
           htext={active}
@@ -39,7 +40,7 @@ class Showcase extends Component {
           source={HeadingHero}
           boxpos='start' hpos='center' hsize='5'
           animation={false}
-          />
+        />
         <Hheader
           htext={active}
           vtext='vuejs/vue'
@@ -52,8 +53,9 @@ class Showcase extends Component {
           source={HeadingHero}
           boxpos='start' hpos='center' hsize='5'
           animation={false}
-          />
+        />
       </div>
+      <div className='grid-heading'>Latest Packages</div>
       <Gridcomponent>
         {[1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 3].map((x, i) => <PackCard name={active} data={Downloads} key={i} />)}
       </Gridcomponent>
