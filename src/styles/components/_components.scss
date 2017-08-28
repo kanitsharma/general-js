@@ -34,6 +34,7 @@
 
 //Gridcomponent
 .grid{
+  margin: 3vh 0;
   display: grid;
   grid-template-columns: repeat(4, auto);
   grid-gap: 3em;
