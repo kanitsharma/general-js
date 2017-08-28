@@ -35,8 +35,7 @@ class Hheader extends Component {
       height : `auto`,
       display : `flex`,
       flexDirection : `${this.state.boxpos}`,
-      position : `relative`,
-      margin: '5vh 5vw'
+      position : `relative`
     }
     const vertical = {
       writingMode : `vertical-lr`,

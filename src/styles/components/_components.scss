@@ -40,24 +40,6 @@
   grid-gap: 3em;
 }
 
-@media only screen and (max-width: 1500px) {
-  .grid{
-    grid-template-columns: repeat(3, auto);
-  }
-}
-
-@media only screen and (max-width: 1120px) {
-  .grid{
-    grid-template-columns: repeat(2, auto);
-  }
-}
-
-@media only screen and (max-width: 750px) {
-  .grid{
-    grid-template-columns: repeat(1, auto);
-  }
-}
-
 //Swift Scroll
 .well {
   transition: 1s cubic-bezier(0.5, 0, 0.5, 1);
@@ -107,6 +89,10 @@
   background-color: $accent-color;
 }
 
+#div {
+  margin: 5vh 6vw;
+}
+
 
 //Loader
 .loader-overlay {
@@ -144,4 +130,28 @@
 }
 .searchbar::placeholder{
   color: $light;
+}
+
+//Media Queries
+
+@media only screen and (max-width: 1500px) {
+  .grid{
+    grid-template-columns: repeat(3, auto);
+    grid-column-gap: 6vw;
+  }
+  #div {
+    margin: 5vh 1vw;
+  }
+}
+
+@media only screen and (max-width: 1120px) {
+  .grid{
+    grid-template-columns: repeat(2, auto);
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .grid{
+    grid-template-columns: repeat(1, auto);
+  }
 }
