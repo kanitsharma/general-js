@@ -36,9 +36,23 @@
 
 .grid-heading{
   color: $light;
-  align-self:stretch;
-	margin: 3vh 0 3vh 8vw;
-  font-size: 4.5em;
-  font-weight: bold;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  align-self:center;
+	margin: 5vh 0;
+  font-size: 1.5em;
+	position: relative;
+}
+.grid-heading:before, .grid-heading:after {
+  position: absolute;
+  top: 51%;
+  overflow: hidden;
+  width: 90%;
+  height: 1px;
+  content: '\a0';
+  background-color: $light;
+}
+.grid-heading:before {
+  margin-left: -100%;
+}
+.grid-heading:after {
+  margin-left:10%;
 }
