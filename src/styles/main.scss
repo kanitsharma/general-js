@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+@import url('https://fonts.googleapis.com/css?family=Mate+SC');
 @import "base";
 
 body {
 	margin: 0;
-  font-family: 'Roboto Mono', monospace;
+  font-family: $monospace;
 }

@@ -16,6 +16,7 @@
       justify-content: space-between;
       align-items: center;
       padding-bottom: 2em;
+      padding-top: 1em;
       color: $secondry-color;
 
       .card-heading {
@@ -26,8 +27,8 @@
   }
 
   &:hover {
-    transform: translateY(-3px);
-    box-shadow: 2px 2px 30px 0 $primary-color-shadow;
+    transform: translateY(-2px);
+    box-shadow: 1px 4px 40px 0 $primary-color-shadow;
   }
 }
 
@@ -123,7 +124,7 @@
   background-position:3% 50%;
   background-size: auto;
 	margin: 1vh;
-	font-family: 'Roboto Mono', monospace;
+	font-family: $monospace;
 }
 .searchbar:focus{
   outline: none;
