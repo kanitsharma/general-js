@@ -5,7 +5,7 @@ import { LineChart, Line } from 'recharts'
 export const SampleGraph = ({ data, width, height }) =>
   <LineChart width={width} height={height} data={data}
     margin={{ top: 5 }}>
-    <Line type='monotone' dataKey='downloads' stroke='#C3073F' strokeWidth={2} />
+    <Line type='monotone' dataKey='downloads' stroke='#F82462' strokeWidth={2} />
   </LineChart>
 
 SampleGraph.propTypes = {
